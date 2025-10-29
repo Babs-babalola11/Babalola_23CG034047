@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fafafa;
+            text-align: center;
+            margin: 0;
+            padding-top: 60px;
+            color: #333;
+        }
+
+        h1 {
+            color: #2b4c7e;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #444;
+        }
+
+        img {
+            max-width: 400px;
+            width: 100%;
+            margin-top: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            background: #2b4c7e;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #1f3a63;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Analysis Result</h1>
+    <!-- changed to use variable name 'emotion' passed from app.py -->
+    <h2>The detected emotion is: <strong>{{ emotion }}</strong></h2>
+    <!-- changed to use image_url (constructed in app.py) -->
+    <img src="{{ image_url }}" alt="Uploaded Image">
+    <br>
+    <a href="/">Try Another Image</a>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f9fc;
+            text-align: center;
+            margin: 0;
+            padding-top: 60px;
+            color: #333;
+        }
+
+        h1 {
+            color: #2b4c7e;
+        }
+
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            background: #fff;
+            padding: 25px 40px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2b4c7e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background: #1f3a63;
+        }
+    </style>
+</head>
+<body>
+    <h1>Emotion Detector</h1>
+    <p>Upload your image to find out the emotion!</p>
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <label for="user_name">Your Name:</label>
+        <!-- changed name to 'name' to match request.form.get('name') in app.py -->
+        <input type="text" id="user_name" name="name" placeholder="Enter your name" required>
+        
+        <label for="image_file">Upload Image:</label>
+        <!-- changed name to 'file' to match request.files['file'] in app.py -->
+        <input type="file" id="image_file" name="file" accept="image/*" required>
+        
+        <input type="submit" value="Analyze Emotion">
+    </form>
+</body>
+</html>
